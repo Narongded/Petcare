@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="webthemez">
+    <title>Pet Care Bootstrap HTML5 Template</title>
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"> 
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico"> 
+</head> 
+
+<body id="home">
+    
+
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="/">หน้าหลัก</a></li> 
+                        <li class="scroll"><a href="/get">ลงทะเบียน</a></li>
+                        <li class="scroll"><a href="/post">แบบลงทะเบียน</a></li>
+                                                                  
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+    </header><!--/header-->
+
+     
+    
+
+    <div class="container">
+        <h2>ทะเบียนผู้ป่วย</h2>
+        <br>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">เลขประจำตัวผู้ป่วย</th>
+                <th scope="col">ชื่อ</th>
+                <th scope="col">นามสกุล</th>
+                <th scope="col">ชื่อสัตว์</th>
+                <th scope="col">ชนิด</th>
+                <th scope="col">ตัวเลือก</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(data) { %>
+              <tr>
+                <th scope="row"><%= data.id %></th>
+                <td><%= data.pn %></td>
+                <td><%= data.ls %></td>
+                <td><%= data._name %></td>
+                <td><%= data.type %></td>
+                <td>
+                    <a href="/edit/<%= data.id %>" class="btn btn-sm btn-outline-warning w-100 mt-2">Edit</a>
+                    <a href="/get/<%= data.id %>" class="btn btn-sm btn-outline-danger w-100 mt-2">Delete</a></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+ <script src="contact/jqBootstrapValidation.js"></script>
+ <script src="contact/contact_me.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/custom-scripts.js"></script>
+</body>
+</html>
